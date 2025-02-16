@@ -44,9 +44,13 @@ local getNPMPath = function()
   return getAppPackagesPath() .. PS .. "npm" .. PS .. "node_modules" .. PS .. ".bin"
 end
 
+local getPyPiPath = function()
+  return getAppPackagesPath() .. PS .. "pypi" .. PS .. "pkgs" .. PS .. "bin"
+end
+
 vim.notify("Setting PATH to " .. getNPMPath(), "info")
 
-vim.env.PATH = getNPMPath() .. PATH_SEPARATOR .. vim.env.PATH
+vim.env.PATH = getNPMPath() .. PATH_SEPARATOR .. getPyPiPath() .. PATH_SEPARATOR .. vim.env.PATH
 vim.fn.setenv("PATH", vim.env.PATH)
 
 return {
