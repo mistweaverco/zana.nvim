@@ -12,10 +12,6 @@
 
 <p></p>
 
-Zana 📦 is Mason.nvim 🧱, but maintained by the community 🌈.
-
-Zana is swahili for "tools" or "tooling".
-
 A thin layer for [Zana](https://github.com/mistweaverco/zana-gui),
 the package manager for Neovim.
 
