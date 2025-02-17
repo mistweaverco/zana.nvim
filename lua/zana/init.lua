@@ -48,9 +48,17 @@ local getPyPiPath = function()
   return getAppPackagesPath() .. PS .. "pypi" .. PS .. "pkgs" .. PS .. "bin"
 end
 
-vim.notify("Setting PATH to " .. getNPMPath(), "info")
+local getGolangPath = function()
+  return getAppPackagesPath() .. PS .. "golang" .. PS .. "bin"
+end
 
-vim.env.PATH = getNPMPath() .. PATH_SEPARATOR .. getPyPiPath() .. PATH_SEPARATOR .. vim.env.PATH
+vim.env.PATH = getNPMPath()
+  .. PATH_SEPARATOR
+  .. getPyPiPath()
+  .. PATH_SEPARATOR
+  .. getGolangPath()
+  .. PATH_SEPARATOR
+  .. vim.env.PATH
 vim.fn.setenv("PATH", vim.env.PATH)
 
 return {
