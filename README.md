@@ -12,8 +12,8 @@
 
 <p></p>
 
-A thin layer for [Zana](https://github.com/mistweaverco/zana-gui),
-the package manager for Neovim.
+A thin layer to use [packages](https://github.com/mistweaverco/zana-registry)
+installed via [Zana](https://github.com/mistweaverco/zana-client) in Neovim.
 
 <p></p>
 
