@@ -36,27 +36,11 @@ local getHomePath = function()
   return normalize_path(path)
 end
 
-local getAppPackagesPath = function()
-  return getHomePath() .. PS .. "packages"
+local getBinPath = function()
+  return getHomePath() .. PS .. "bin"
 end
 
-local getNPMPath = function()
-  return getAppPackagesPath() .. PS .. "npm" .. PS .. "node_modules" .. PS .. ".bin"
-end
-
-local getPyPiPath = function()
-  return getAppPackagesPath() .. PS .. "pypi" .. PS .. "pkgs" .. PS .. "bin"
-end
-
-local getGolangPath = function()
-  return getAppPackagesPath() .. PS .. "golang" .. PS .. "bin"
-end
-
-vim.env.PATH = getNPMPath()
-  .. PATH_SEPARATOR
-  .. getPyPiPath()
-  .. PATH_SEPARATOR
-  .. getGolangPath()
+vim.env.PATH = getBinPath()
   .. PATH_SEPARATOR
   .. vim.env.PATH
 vim.fn.setenv("PATH", vim.env.PATH)
