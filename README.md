@@ -15,6 +15,8 @@
 A thin layer to use [packages](https://github.com/mistweaverco/zana-registry)
 installed via [Zana](https://github.com/mistweaverco/zana-client) in Neovim.
 
+You only need this, if you dont want to have your `PATH` modified by sourcing `zana env`.
+
 <p></p>
 
 </div>
